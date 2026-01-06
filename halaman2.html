@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sejarah Film Star Wars</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <img src="Gambar/Star Wars banner.png" alt="Star Wars History Banner" class="hero-img">
+
+    <div class="container mt-5 text-center">
+        
+        <div id="galactic-clock">
+            <span id="time-display">00:00:00</span>
+        </div>
+
+        <h3 class="mb-5">Sejarah Film Star Wars</h3>
+
+        <div class="content-section text-start">
+            <p class="fs-5">
+                Kisah <span class="highlight-text">Star Wars</span> berawal dari visi <span class="highlight-text">George Lucas</span>, seorang sutradara muda dari era New Hollywood yang terobsesi pada mitologi, serial fiksi ilmiah, dan cerita petualangan. 
+            </p>
+            <p class="fs-5">
+                Star Wars pertama kali muncul tahun <span class="highlight-text">1977</span>. Awalnya banyak studio film yang menolak karena dianggap terlalu “aneh”. Mereka mempertanyakan konsep ksatria bergaya samurai yang menggunakan pedang laser, robot yang bisa berbicara, hingga penyihir luar angkasa. 
+            </p>
+            <p class="fs-5">
+                Namun ternyata, begitu dirilis, film ini langsung meledak! Star Wars menjadi film <i>space opera</i> pertama yang sukses besar secara global dan membuka jalan bagi seluruh genre film sci-fi modern yang kita nikmati hari ini.
+            </p>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6 offset-md-3">
+                <div class="card bg-dark border-secondary">
+                    <div class="card-header border-secondary text-warning">
+                        <small>NAVIGASI GALAKSI</small>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-0 text-start">
+                            <li><a href="halaman2.html" class="nav-link-custom">● Sejarah Star Wars</a></li>
+                            <li><a href="halaman1.html" class="nav-link-custom">● Storyline Star Wars Prequel</a></li>
+                            <li><a href="halaman3.html" class="nav-link-custom">● Gallery Favorit Karakter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="text-center mt-5">
+        <b>&copy; COPYRIGHT [MUHAMMAD FAIZ AL RASYID/251011700974/01SIP016]-2025</b>
+    </footer>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            document.getElementById('time-display').textContent = "STARDATE: " + hours + ":" + minutes + ":" + seconds;
+        }
+
+        
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        
+        console.log("Welcome to the Galactic Archives.");
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

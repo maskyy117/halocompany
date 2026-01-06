@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storyline Star Wars Prequel</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <img src="gambar/prequelsw.jpg" alt="Star Wars Banner" class="hero-img">
+
+    <div class="container mt-4 text-center">
+        <div id="galactic-clock">
+            <span id="time-display">00:00:00</span>
+        </div>
+        
+        <h3 class="mb-5">Storyline Star Wars Prequel</h3>
+
+        <div class="content-section text-start shadow">
+            <h4 class="text-warning">Episode I: The Phantom Menace (1999)</h4>
+            <p>Episode I: The Phantom Menace menceritakan bagaimana Trade Federation yang dikepalai Nute Gunray ingin mengobrak-abrik Planet Naboo yang memiliki kepentingan besar menjaga keseimbangan dan kedamaian The Old Republic...</p>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6 offset-md-3">
+                <div class="card bg-dark border-secondary p-3">
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="halaman2.html" class="nav-link-custom">Sejarah Star Wars</a></li>
+                        <li><a href="halaman1.html" class="nav-link-custom">Storyline Star Wars Prequel</a></li>
+                        <li><a href="halaman3.html" class="nav-link-custom">Gallery Favorit Karakter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <b>&copy; COPYRIGHT [MUHAMMAD FAIZ AL RASYID/251011700974/01SIP016]-2025</b>
+    </footer>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            
+        
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+    
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        
+            const timeString = hours + ":" + minutes + ":" + seconds;
+
+            
+            document.getElementById('time-display').textContent = "STARDATE: " + timeString;
+        }
+
+        
+        setInterval(updateClock, 1000);
+
+        
+        updateClock();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
